@@ -8,16 +8,35 @@
 </head>
 <body>
 
-    <header>
-
-    </header>
-
-    <main>
-
-    </main>
+    <section class="primerSeccion">
+        <header class="header__class">
+            <h1 class="titulo">
+                <img src="Assets/icono.png" alt="icono de referencia" width="50px" height="50px">
+                Encriptador</h1>
+            <section class="seccion_titulo">
+                <p><strong>Reglas</strong></p>
+                <ul class="seccion__lista">
+                    <li>Ingrese unicamente minusculas</li>
+                    <li>No se permiten acentos</li>
+                </ul>
+            </section>
+        </header>
+    
+        <main class="main__class">
+            <textarea class="textoUsuario" id="textoUsuario">Ingresa el texto aquí</textarea>
+            <section class="seccion__botones">
+                <button class="botones"><strong>Encriptar</strong></button>
+                <!--
+                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
+                -->
+                <button class="botones"><strong>Desencriptar</strong></button>
+            </section>
+            <textarea class="respuestaAUsuario" readonly>Ningun mensaje fue encontrado</textarea>
+        </main>
+    </section>
 
     <footer>
-        
+        <p>Desarrollado por Marlett Núñez Magaña >> Queksmar</p>
     </footer>
 
 </body>
