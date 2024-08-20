@@ -7,7 +7,7 @@
     --font_encriptada: "Sankofa Display", sans-serif;
     --font_textos: "Poppins", sans-serif;
 
-    --color_primario: #26355D;
+    --color_primario: #1e2a65;
     --color_secundario: #AF47D2;
     --color_terciario: #FF8F00;
     --color_cuaternario: #FFDB00;
@@ -29,7 +29,8 @@ body{
 
 .header__class{
     width: 50%;
-    background-color: var(--color_primario);
+    background: rgb(5,10,36);
+    background: radial-gradient(circle, var(--color_primario) 5%, rgba(5,10,36,1) 100%);
     color: var(--color_secundario);
     display: flex;
     flex-direction: column;

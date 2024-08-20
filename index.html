@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <script src="app.js"></script>
 </head>
 <body>
 
@@ -23,7 +24,7 @@
         </header>
     
         <main class="main__class">
-            <textarea class="textoUsuario" id="textoUsuario">Ingresa el texto aquí</textarea>
+            <input class="textoUsuario" id="textoUsuario" type="text" pattern="[a-z]" title="Texto sin acentos y en minusculas"/>
             <section class="seccion__botones">
                 <button class="botones"><strong>Encriptar</strong></button>
                 <!--
@@ -31,7 +32,8 @@
                 -->
                 <button class="botones"><strong>Desencriptar</strong></button>
             </section>
-            <textarea class="respuestaAUsuario" readonly>Ningun mensaje fue encontrado</textarea>
+            <textarea class="respuestaAUsuario" id="texto_procesado" readonly>Ningun mensaje fue encontrado</textarea>
+            <button class="botones"><strong>Copiar</strong></button>
         </main>
     </section>
 
