@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     <link rel="stylesheet" href="./Styles/style.css">
-    <script src="app.js"></script>
 </head>
 <body>
 
@@ -27,13 +26,14 @@
             <input class="textoUsuario" id="textoUsuario" type="text" pattern="[a-z]" title="Texto sin acentos y en minusculas"/>
             <section class="seccion__botones">
                 <button class="botones" onclick="btn_encriptar();"><strong>Encriptar</strong></button>
-                <!--
-                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
-                -->
                 <button class="botones" onclick="btn_desencriptar();"><strong>Desencriptar</strong></button>
             </section>
+            <!--
             <textarea class="respuestaAUsuario" id="texto_procesado" readonly>Ningun mensaje fue encontrado</textarea>
-            <button class="botones"><strong>Copiar</strong></button>
+            -->
+            <p class="respuestaAUsuario" id="texto_procesado"></p>
+            
+            <button class="botones" onclick="btn_copiar();" id="btn_copiar" disabled><strong>Copiar</strong></button>
         </main>
     </section>
 
@@ -41,5 +41,6 @@
         <p>Desarrollado por Marlett Núñez Magaña >> Queksmar</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>

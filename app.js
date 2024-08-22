@@ -4,9 +4,6 @@ let son_minusculas = false;
 
 // ==================== FUNCIONES ====================
 
-//funcion para boton desencriptar
-//let texto_inicial_desencriptar = document.getElementById('textoUsuario').value;
-
 //funcion flecha que pasa el texto a minusculas
 let texto_a_minusculas = (texto_inicial_encriptar) => texto_inicial_encriptar.toLowerCase();
 
@@ -26,7 +23,6 @@ function valida_texto(texto_inicial_encriptar){
 
     return existen_consonantes;
 }
-
 
 //funcion que encripta
 function encripta_texto(texto_inicial_encriptar){
@@ -69,6 +65,7 @@ function btn_encriptar(){
 
     if(valida_texto(texto_inicial_encriptar)){
         texto_procesado(encripta_texto(texto_inicial_encriptar));
+        document.querySelector('#btn_copiar').removeAttribute('disabled');
         console.log(encripta_texto);
     } else {
         texto_procesado("El texto ingresado no contiene elementos para poderlo encriptar");
@@ -83,7 +80,6 @@ function guarda_secuencia(longitud_secuencia, index, texto){
     for(let i = index; i < limite; i++){
         texto_temporal = texto_temporal + texto[i];
     }
-
     return texto_temporal;
 }
 
@@ -151,8 +147,36 @@ function btn_desencriptar(){
 
     if(valida_texto(texto_inicial_desencriptar)){
         texto_procesado(desencripta_texto(texto_inicial_desencriptar));
+        document.querySelector('#btn_copiar').removeAttribute('disabled');
         console.log(desencripta_texto);
     } else {
         texto_procesado("El texto ingresado no contiene elementos para poderlo desencriptar");
     }
 }
+
+//funcion para copiar usando la API de clipboard
+const btn_copiar = async () => {
+    let texto_para_copiar = document.querySelector('#texto_procesado').innerHTML;
+    try {
+        await navigator.clipboard.writeText(texto_para_copiar);
+        console.log(texto_para_copiar);
+        console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+        console.error('Error al copiar: ', err);
+    }
+}
+
+//funcion que limpia campo de texto inicial
+function limpiarInput() {
+    document.querySelector('#textoUsuario').value = '';
+    return;
+}
+
+//funcion que establece condiciones iniciales
+function condicionesIniciales() {
+    limpiarInput();
+    texto_procesado("Ningún mensaje fue encontrado");
+    document.querySelector('#btn_copiar').setAttribute('disabled', 'true');
+}
+
+condicionesIniciales();
