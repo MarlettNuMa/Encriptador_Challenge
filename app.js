@@ -52,10 +52,7 @@ function encripta_texto(texto_inicial_encriptar){
                     break;            
             }
         } else texto_encriptado = texto_encriptado + letra;
-
-        console.log(texto_encriptado);
     }
-    console.log(texto_encriptado);
     return texto_encriptado;
 }
 
@@ -66,7 +63,6 @@ function btn_encriptar(){
     if(valida_texto(texto_inicial_encriptar)){
         texto_procesado(encripta_texto(texto_inicial_encriptar));
         document.querySelector('#btn_copiar').removeAttribute('disabled');
-        console.log(encripta_texto);
     } else {
         texto_procesado("El texto ingresado no contiene elementos para poderlo encriptar");
     }
@@ -148,7 +144,6 @@ function btn_desencriptar(){
     if(valida_texto(texto_inicial_desencriptar)){
         texto_procesado(desencripta_texto(texto_inicial_desencriptar));
         document.querySelector('#btn_copiar').removeAttribute('disabled');
-        console.log(desencripta_texto);
     } else {
         texto_procesado("El texto ingresado no contiene elementos para poderlo desencriptar");
     }
@@ -159,7 +154,6 @@ const btn_copiar = async () => {
     let texto_para_copiar = document.querySelector('#texto_procesado').innerHTML;
     try {
         await navigator.clipboard.writeText(texto_para_copiar);
-        console.log(texto_para_copiar);
         console.log('Contenido copiado al portapapeles');
     } catch (err) {
         console.error('Error al copiar: ', err);

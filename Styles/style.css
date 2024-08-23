@@ -11,6 +11,7 @@
     --color_secundario: #AF47D2;
     --color_terciario: #FF8F00;
     --color_cuaternario: #FFDB00;
+    --color_sombras: #15F5BA;
 }
 
 /*Reset*/
@@ -20,57 +21,55 @@
 }
 
 body{
-    box-sizing: border-box;
-}
-
-.primerSeccion{
-    display: flex;
-}
-
-.header__class{
-    width: 50%;
+    height: 100vh;
     background: rgb(5,10,36);
     background: radial-gradient(circle, var(--color_primario) 5%, rgba(5,10,36,1) 100%);
-    color: var(--color_secundario);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+}
+
+/*
+item 1 de body (header)
+*/
+.header__class{
+    height: 10vh;
+    padding: 3% 0% 0% 4%;
 }
 
 .titulo{
     display: flex;
     align-items: baseline;
     gap: 20px;
-    padding: 5% 0% 0% 10%;
     font-family: var(--font_titulos);
     font-size: 2rem;
+    color: var(--color_secundario);
 }
 
-.imagenDifumina{
-    opacity: 0.2;
-}
-
-.seccion_titulo{
-    font-family: var(--font_textos);
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding: 20% 10%;
-    color: var(--color_terciario);
-
-}
-
-.seccion__lista{
-    font-size: 1.25rem;
-}
-
+/*
+item 2 de body (main)
+    -reglas, input, botones
+    -respuesta, copiar
+*/
 .main__class{
-    background-color: white;
-    width: 50%;
+    height: 85vh;
+    display: flex;
+}
+
+.seccion__izquierda{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5%  0 0 0;
     gap: 20px;
+    font-family: var(--font_textos);
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--color_terciario);
+    margin: 10% 2%;
+}
+
+.seccion__lista{
+    font-size: 0.75rem;
 }
 
 .textoUsuario{
@@ -89,25 +88,46 @@ body{
 }
 
 .botones{
-    border-radius: 24px;
+    border-radius: 20px;
     background-color: var(--color_secundario);
     color:white;
     height: 50px;
     width: 200px;
     font-family: var(--font_textos);
+    cursor: pointer;
+}
+
+.botones:hover{
+    box-shadow: 0px 0px 10px 2px var(--color_sombras);
+}
+
+.seccion__derecha{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.308);
+    margin: 2% 5%;
 }
 
 .respuestaAUsuario{
     width: 75%;
     height: 25%;
-    background-color: #26355D;
     color: white;
     padding: 2%;
     resize: none;
     font-family: var(--font_textos);
+    flex: 1 1 auto;
 }
 
+#btn_copiar{
+    margin: 0 0 5% 0;
+}
+
+/*item 3 de body (footer)*/
 footer {
+    height: 5vh;
     background-color: var(--color_cuaternario);
     text-align: center;
     padding: 15px 0;
