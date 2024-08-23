@@ -4,9 +4,6 @@ let son_minusculas = false;
 
 // ==================== FUNCIONES ====================
 
-//funcion flecha que pasa el texto a minusculas
-let texto_a_minusculas = (texto_inicial_encriptar) => texto_inicial_encriptar.toLowerCase();
-
 //funcion que muestra el texto procesado
 let texto_procesado = (texto_encriptado) => document.getElementById('texto_procesado').innerHTML = texto_encriptado;
 
@@ -158,6 +155,12 @@ const btn_copiar = async () => {
     } catch (err) {
         console.error('Error al copiar: ', err);
     }
+}
+
+//funcion que pasa el texto a minusculas
+function btn_minusculas(){
+    let texto_para_transformar = document.querySelector('#textoUsuario').value.toLowerCase();
+    texto_procesado(texto_para_transformar);
 }
 
 //funcion que limpia campo de texto inicial

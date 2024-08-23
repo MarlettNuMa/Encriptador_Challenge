@@ -84,6 +84,13 @@ item 2 de body (main)
 
 .seccion__botones{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.botones_primarios{
+    display: flex;
     gap: 24px;
 }
 
@@ -134,3 +141,57 @@ footer {
 }
 
 /*Media Queri*/
+@media (max-width: 1250px){
+
+    .main__class{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion__izquierda{
+        width: 100%;
+        margin: 5% 2%;
+    }
+
+    .seccion__derecha{
+        width: 80%;
+    }
+
+    .respuestaAUsuario{
+        padding: 10% 0%;
+    }
+
+    #btn_copiar{
+        margin: 0 0 1% 0;
+    }
+}
+
+@media(max-width: 720px) {
+
+    .main__class{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion__izquierda{
+        width: 100%;
+        margin: 5% 2%;
+    }
+
+    .botones_primarios{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion__derecha{
+        width: 80%;
+    }
+
+    .respuestaAUsuario{
+        padding: 10% 0%;
+    }
+
+    #btn_copiar{
+        margin: 0 0 1% 0;
+    }
+}
