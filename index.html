@@ -25,7 +25,7 @@
                 <input class="textoUsuario" id="textoUsuario" type="text" pattern="[a-z]" title="Texto sin acentos y en minusculas"/>
                 <section class="seccion__botones">
                     <div class="botones_primarios">
-                        <button class="botones" onclick="btn_encriptar();"><strong>Encriptar</strong></button>
+                        <button class="botones" onclick="btn_encriptar();" id="btn_encriptar"><strong>Encriptar</strong></button>
                         <button class="botones" onclick="btn_desencriptar();"><strong>Desencriptar</strong></button>
                     </div>
                     <button class="botones" onclick="btn_minusculas();" ><strong>Texto a minusculas</strong></button>
@@ -40,8 +40,14 @@
             </section>
         </main>
 
-    <footer>
-        <p>Desarrollado por Marlett Núñez Magaña >> Queksmar</p>
+    <footer class="footer__class">
+        <p id="nombre">2024 Marlett Nuñez Magaña >> Queksmar</p>
+        <!--
+        <div id="redes__sociales">
+            <a href="www.linkedin.com/in/marlett-núñez-magaña-24b72487"><img src="Assets/linkedin.png" alt="Icono de Linkedin"></a>
+            <a href="https://github.com/MarlettNuMa"><img src="Assets/github.png" alt="Icono de Github"></a>
+        </div>
+        -->
     </footer>
 
     <script src="app.js"></script>
